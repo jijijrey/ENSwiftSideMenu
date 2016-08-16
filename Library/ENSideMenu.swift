@@ -231,7 +231,7 @@ public class ENSideMenu : NSObject, UIGestureRecognizerDelegate {
                 isMenuOpen ? width - menuWidth : width+1.0,
             sourceView.frame.origin.y,
             menuWidth,
-            height
+            height - 70
         )
         sideMenuContainerView.frame = menuFrame
     }
