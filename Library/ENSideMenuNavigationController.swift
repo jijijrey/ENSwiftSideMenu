@@ -19,7 +19,7 @@ public class ENSideMenuNavigationController: UINavigationController, ENSideMenuP
         super.viewDidLoad()
     }
     
-    public init( menuViewController: UIViewController, contentViewController: UIViewController?, navigationBarClass: AnyClass?) {
+    public func initNavigation( menuViewController: UIViewController, contentViewController: UIViewController?, navigationBarClass: AnyClass?) {
         super.init(navigationBarClass: navigationBarClass, toolbarClass: nil)
         
         if (contentViewController != nil) {
