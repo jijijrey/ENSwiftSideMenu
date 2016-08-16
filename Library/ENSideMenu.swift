@@ -124,7 +124,7 @@ public extension UIViewController {
 
 public class ENSideMenu : NSObject, UIGestureRecognizerDelegate {
     /// The width of the side menu view. The default value is 160.
-    public var menuWidth : CGFloat = 160.0 {
+    public var menuWidth : CGFloat = 200.0 {
         didSet {
             needUpdateApperance = true
             updateSideMenuApperanceIfNeeded()
