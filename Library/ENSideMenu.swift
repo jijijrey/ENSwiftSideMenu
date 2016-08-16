@@ -231,7 +231,7 @@ public class ENSideMenu : NSObject, UIGestureRecognizerDelegate {
                 isMenuOpen ? width - menuWidth : width+1.0,
             sourceView.frame.origin.y,
             menuWidth,
-            height - 70
+            height
         )
         sideMenuContainerView.frame = menuFrame
     }
@@ -241,10 +241,10 @@ public class ENSideMenu : NSObject, UIGestureRecognizerDelegate {
             (UIApplication.sharedApplication().statusBarOrientation == UIInterfaceOrientation.LandscapeRight ||
                 UIApplication.sharedApplication().statusBarOrientation == UIInterfaceOrientation.LandscapeLeft) {
                     // iOS 7.1 or lower and landscape mode -> interchange width and height
-                    return (height, width)
+                    return (height, width - 70)
         }
         else {
-            return (width, height)
+            return (width, height - 70)
         }
         
     }
