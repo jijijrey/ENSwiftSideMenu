@@ -19,16 +19,32 @@ public class ENSideMenuNavigationController: UINavigationController, ENSideMenuP
         super.viewDidLoad()
     }
     
-    public func initNavigation( menuViewController: UIViewController, contentViewController: UIViewController?, navigationBarClass: AnyClass?) {
+//    public init( menuViewController: UIViewController, contentViewController: UIViewController?, navigationBarClass: AnyClass?) {
+//        super.init(nibN)
+//        super.init(navigationBarClass: navigationBarClass, toolbarClass: nil)
+//        
+//        if (contentViewController != nil) {
+//            self.viewControllers = [contentViewController!]
+//        }
+//
+//        sideMenu = ENSideMenu(sourceView: self.view, menuViewController: menuViewController, menuPosition:.Left)
+//        view.bringSubviewToFront(navigationBar)
+//    }
+    
+    public init(menuViewController: UIViewController, contentVIewController: UIViewController?, navigationBarClass: AnyClass?, toolbarClass: AnyClass?) {
+        
         super.init(navigationBarClass: navigationBarClass, toolbarClass: nil)
         
-        if (contentViewController != nil) {
-            self.viewControllers = [contentViewController!]
+        if (contentVIewController != nil)
+        {
+            self.viewControllers = [contentVIewController!];
         }
-
-        sideMenu = ENSideMenu(sourceView: self.view, menuViewController: menuViewController, menuPosition:.Left)
-        view.bringSubviewToFront(navigationBar)
+        
+        sideMenu = ENSideMenu(sourceView: self.view, menuViewController: menuViewController, menuPosition: .Left)
+        view.bringSubviewToFront(navigationBar);
+        
     }
+
 
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
