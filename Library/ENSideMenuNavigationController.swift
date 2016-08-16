@@ -19,8 +19,8 @@ public class ENSideMenuNavigationController: UINavigationController, ENSideMenuP
         super.viewDidLoad()
     }
     
-    public init( menuViewController: UIViewController, contentViewController: UIViewController?) {
-        super.init(nibName: nil, bundle: nil)
+    public init( menuViewController: UIViewController, contentViewController: UIViewController?, navigationBarClass: AnyClass?) {
+        super.init(navigationBarClass: navigationBarClass, toolbarClass: nil)
         
         if (contentViewController != nil) {
             self.viewControllers = [contentViewController!]
